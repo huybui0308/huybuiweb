@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bui Quang Huy — Hitslikehome — Cybersecurity</title>
+  <meta name="description" content="Bui Quang Huy (Hitslikehome) — Cybersecurity student focused on malware analysis and DFIR. Projects, skills and competitions." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%23000/><text x=%2250%22 y=%2258%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%2300ff99%25%22 font-family=%22monospace%22>H</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="background"></canvas>
+
+  <header class="site-header" role="banner">
+    <nav class="nav">
+      <a class="logo" href="#home">Hitslikehome</a>
+      <ul class="nav-links" role="navigation" aria-label="Primary">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#competitions">Competitions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="toggleMotion" class="btn-ghost" title="Toggle motion (prefers-reduced-motion)" aria-pressed="false">Motion: On</button>
+    </nav>
+  </header>
+
+  <main id="home" class="main">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="name">Bui Quang Huy <span class="nick">— Hitslikehome</span></h1>
+        <p class="tagline">Cybersecurity student — focused on <span id="typed" aria-live="polite"></span></p>
+        <p class="lead">Aspiring malware analyst & DFIR practitioner. I build attack–defense platforms and automate realistic CTF environments.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#projects">View Project</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+        <div class="stats">
+          <div><strong>Focus</strong><span>Malware Analysis · DFIR</span></div>
+          <div><strong>Location</strong><span>Vietnam</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel about">
+      <h2>About</h2>
+      <p>Hi — I'm Bui Quang Huy (Hitslikehome), a cybersecurity student aiming to specialize in malware analysis and digital forensics & incident response (DFIR). I enjoy creating realistic attack–defense training environments, automating match workflows, and building tools that emulate real-world offensive and defensive scenarios.</p>
+      <ul class="quick">
+        <li><strong>Nickname:</strong> Hitslikehome</li>
+        <li><strong>Email:</strong> (available on request)</li>
+        <li><strong>Contact:</strong> <a href="https://www.facebook.com/huynvb.bui.3/" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </section>
+
+    <section id="skills" class="panel skills">
+      <h2>Skills</h2>
+      <p class="muted">Tools & techniques I work with</p>
+      <div class="skill-grid">
+        <div class="skill">
+          <h3>Reverse Engineering</h3>
+          <ul>
+            <li>IDA Pro</li>
+            <li>Ghidra</li>
+            <li>Radare2</li>
+            <li>x64dbg</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Forensics & DFIR</h3>
+          <ul>
+            <li>Volatility</li>
+            <li>Wireshark</li>
+            <li>Sysinternals</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Dev & Ops</h3>
+          <ul>
+            <li>Docker / Containerization</li>
+            <li>Linux</li>
+            <li>Python / Scripting</li>
+          </ul>
+        </div>
+        <div class="skill-bars">
+          <div class="bar">
+            <label>Reverse Engineering</label>
+            <div class="progress" data-value="85"><span></span></div>
+          </div>
+          <div class="bar">
+            <label>DFIR</label>
+            <div class="progress" data-value="78"><span></span></div>
+          </div>
+          <div class="bar">
+            <label>Platform Dev</label>
+            <div class="progress" data-value="72"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="panel projects">
+      <h2>Projects</h2>
+      <article class="project-card">
+        <header>
+          <h3>Attack–Defense Platform for Cybersecurity Training and Competitions</h3>
+          <p class="muted">A flexible Attack–Defense platform tailored for education, training, and competitions.</p>
+        </header>
+
+        <div class="project-body">
+          <ul>
+            <li>Preconfigured containerized environment containing vulnerable services so participants can both defend and attack.</li>
+            <li>Automated match scheduling, flag rotation, service health-checking, and scoreboard updates.</li>
+            <li>Instructor customization (number/type of vulnerabilities, flag locations via environment variables, bot health scripts).</li>
+            <li>Automatic flag updates and point recalculations to simulate continuous engagement.</li>
+          </ul>
+          <details>
+            <summary>Technical notes & features</summary>
+            <p>Implemented using container orchestration (Docker + orchestration scripts), health bots, and a central match scheduler. Services are run in isolated containers with configurable flags exposed to participants. Scoreboard updates are real-time and fault-tolerant with periodic integrity checks.</p>
+            <p class="muted small">Want the repo or architecture diagram? I can prepare a public write-up or sanitized demo on request.</p>
+          </details>
+        </div>
+
+        <footer class="project-meta">
+          <div><strong>Role</strong><span>Platform design & automation</span></div>
+          <div><strong>Status</strong><span>In development / prototype</span></div>
+        </footer>
+      </article>
+    </section>
+
+    <section id="competitions" class="panel competitions">
+      <h2>Competitions</h2>
+      <p class="muted">Selected results</p>
+      <ul class="timeline">
+        <li><time>2024</time><strong>Finalist Bracket A</strong> — ASEAN Student Cybersecurity Competition 2024</li>
+        <li><time>2025</time><strong>Top 50 (Advanced)</strong> — Hacktheon Sejong, South Korea 2025</li>
+        <li><time>2025</time><strong>Top 62</strong> — HackTheBox Cyber Apocalypse CTF 2025</li>
+        <li><time>2025</time><strong>Top 18 Finals</strong> — Digital Dragon CTF DaNang 2025</li>
+        <li><time>2025</time><strong>Finalist Bracket B</strong> — Cybersecurity Student Contest Vietnam 2025</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="panel contact">
+      <h2>Contact</h2>
+      <p>Find me on Facebook or send a message via the link below.</p>
+      <p><a class="btn" href="https://www.facebook.com/huynvb.bui.3/" target="_blank" rel="noopener">Facebook</a></p>
+      <p class="muted small">If you'd like to collaborate or see a demo of the platform, feel free to reach out.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <small>© <span id="year"></span> Bui Quang Huy — Hitslikehome </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
